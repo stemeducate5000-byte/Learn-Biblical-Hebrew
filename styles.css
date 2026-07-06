@@ -52,12 +52,28 @@ h1, h2, h3 {
     align-items: center;
 }
 
+/* Align the header logo and text side-by-side */
 .logo-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Stack the Hebrew and English texts vertically next to the logo */
+.logo-text-stack {
     display: flex;
     flex-direction: column;
 }
 
-/* Styles specifically for the Hebrew script */
+/* Keeps the navigation bar logo small and professional */
+.header-logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Styles specifically for the Hebrew script in header */
 .hebrew-logo {
     font-family: 'Cardo', Georgia, serif;
     font-size: 1.5rem;
@@ -113,6 +129,17 @@ h1, h2, h3 {
 .hero-container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Styles the larger centered emblem in the middle of the Hero section */
+.hero-logo-large {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
 }
 
 .hero-subtitle {
@@ -353,6 +380,12 @@ h1, h2, h3 {
 
     .hero-hebrew {
         font-size: 2.2rem;
+    }
+
+    /* Scales down the large emblem in the hero section on mobile screen sizes */
+    .hero-logo-large {
+        max-width: 130px;
+        margin-bottom: 15px;
     }
 
     .grid-container {
